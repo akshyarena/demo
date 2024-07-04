@@ -1,0 +1,62 @@
+package Position2.ArenaSuite.tests;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import Position2.ArenaSuite.testcomponents.BaseTest;
+import position2.arenasuite.pageobjects.DeliveryDashboardPage;
+import position2.arenasuite.pageobjects.LoginPage;
+
+public class Login extends BaseTest {
+
+	WebDriver driver;
+	DeliveryDashboardPage deliveryDashboardPage;
+	LoginPage loginpage;
+
+	@BeforeClass
+	public void setup() {
+		driver = initializeDriver();
+		launchApplication();
+		loginpage = new LoginPage(driver);
+		deliveryDashboardPage = new DeliveryDashboardPage(driver);
+	}
+
+	// Test case for Login to Arena with Valid username and password
+	@Test
+	public void validLogin() {
+
+		loginpage.loginArena();
+
+	}
+
+	// Validating the page after successful login like assertion checks
+	@Test(dependsOnMethods = "validLogin")
+	public void assertionCheck() {
+		String expectedSubstring = "https://test.thearena.ai";
+		deliveryDashboardPage.verifyElementsPresentOnDashboard();
+		deliveryDashboardPage.veriyUrl(expectedSubstring);
+
+	}
+
+	// Saving a filter and checking whether the filter has been created successfully
+	@Test(dependsOnMethods = "assertionCheck")
+	public void saveFilterCreation() throws InterruptedException {
+		deliveryDashboardPage.createAndSaveFilter("Magnum (CreditStrong)", "Filtername 1");
+		deliveryDashboardPage.verifyFilterPresent("Filtername 1");
+
+	}
+
+	@Test(dependsOnMethods = "saveFilterCreation")
+	public void addTimeEntry() throws InterruptedException {
+		deliveryDashboardPage.addTimeEntry("002Notification:");
+
+	}
+
+	// @AfterClass
+	public void tearDown() {
+		if (driver != null) {
+			driver.quit();
+		}
+	}
+}

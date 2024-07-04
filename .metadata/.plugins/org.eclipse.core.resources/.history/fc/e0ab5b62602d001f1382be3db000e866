@@ -1,0 +1,56 @@
+package position2.arenasuite.pageobjects;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import position2.arenasuite.reusablecomponent.ReusableComponent;
+
+public class LoginPage extends ReusableComponent {
+	WebDriver driver;
+	
+	public LoginPage(WebDriver driver)
+	{
+		super(driver);
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+	
+	@FindBy(id="email")
+	WebElement userLoginEmail;
+	
+	@FindBy (id="password")
+	WebElement userLoginPassword;
+	
+	@FindBy (xpath="//button[contains(@class,'bt-theme-primary')]")
+	WebElement loginSubmitButton;
+	
+	
+	
+	public void goTo()
+	{
+		driver.get("https://test.thearena.ai/");
+	}
+	
+	public void loginArena()
+	{
+		userLoginEmail.sendKeys("akshay.v@position2.com");
+		userLoginPassword.sendKeys("Position2!");
+		loginSubmitButton.click();
+	}
+	
+	public void dataLogin()
+	{
+		Object[][] obj= new Object[1][2];
+		obj[0][0]="akshay.v@position2.com";
+		obj[0][0]="Position2!";
+		
+		
+	}
+
+	
+
+}

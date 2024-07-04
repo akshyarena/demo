@@ -1,0 +1,51 @@
+package Position2.ArenaSuite.tests;
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import Position2.ArenaSuite.testcomponents.BaseTest;
+import position2.arenasuite.pageobjects.LoginPage;
+
+public class Login extends BaseTest {
+
+	LoginPage loginpage;
+
+	@BeforeClass
+	public void setup() {
+		initializeDriver();
+		launchApplication();
+		loginpage = new LoginPage(driver);
+
+	}
+	// Test case for Login to Arena with Valid username and password
+		@Test (priority=1)
+		public void inValidLogin() {
+			loginpage.loginArenaInValid();
+			Assert.assertEquals("Password doesnot match for the email id given",
+			loginpage.getErrorMessage());
+
+		}
+		
+		
+		 @Test (priority=2)
+		    public void testClearInputFields() {
+		        loginpage.clearInputFields();
+		        
+		        
+		    }
+	
+	
+	
+
+	// Test case for Login to Arena with Valid username and password
+	@Test (priority=3)
+	public void validLogin() {
+		loginpage.loginArenaValid();
+		
+
+	}
+	
+	
+
+}

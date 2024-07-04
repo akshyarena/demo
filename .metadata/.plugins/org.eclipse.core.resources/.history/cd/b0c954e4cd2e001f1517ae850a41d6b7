@@ -1,0 +1,5 @@
+package position2.arenasuite.resources;
+
+public class ExtentReporter {
+
+}

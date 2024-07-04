@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="3" failed="1" skipped="1">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-28T10:52:58 IST" name="Suite" finished-at="2024-06-28T10:53:15 IST" duration-ms="16820">
+    <groups>
+    </groups>
+    <test started-at="2024-06-28T10:52:58 IST" name="Test" finished-at="2024-06-28T10:53:15 IST" duration-ms="16820">
+      <class name="Position2.ArenaSuite.tests.DeliveryDashboard">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Position2.ArenaSuite.tests.DeliveryDashboard@9816741]" started-at="2024-06-28T10:53:07 IST" name="setup" finished-at="2024-06-28T10:53:07 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="assertionCheck()[pri:0, instance:Position2.ArenaSuite.tests.DeliveryDashboard@9816741]" started-at="2024-06-28T10:53:07 IST" name="assertionCheck" finished-at="2024-06-28T10:53:10 IST" depends-on-methods="Position2.ArenaSuite.tests.Login.validLogin" duration-ms="2156" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assertionCheck -->
+        <test-method signature="saveFilterCreation()[pri:0, instance:Position2.ArenaSuite.tests.DeliveryDashboard@9816741]" started-at="2024-06-28T10:53:10 IST" name="saveFilterCreation" finished-at="2024-06-28T10:53:15 IST" depends-on-methods="Position2.ArenaSuite.tests.DeliveryDashboard.assertionCheck" duration-ms="5437" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Filtername 1 was not found in the filter list. expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Filtername 1 was not found in the filter list. expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at position2.arenasuite.pageobjects.DeliveryDashboardPage.verifyFilterPresent(DeliveryDashboardPage.java:115)
+at Position2.ArenaSuite.tests.DeliveryDashboard.saveFilterCreation(DeliveryDashboard.java:34)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- saveFilterCreation -->
+        <test-method signature="addTimeEntry()[pri:0, instance:Position2.ArenaSuite.tests.DeliveryDashboard@9816741]" started-at="2024-06-28T10:53:15 IST" name="addTimeEntry" finished-at="2024-06-28T10:53:15 IST" depends-on-methods="Position2.ArenaSuite.tests.DeliveryDashboard.saveFilterCreation" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Position2.ArenaSuite.tests.DeliveryDashboard.addTimeEntry() on instance Position2.ArenaSuite.tests.DeliveryDashboard@9816741 depends on not successfully finished methods 
+[Position2.ArenaSuite.tests.DeliveryDashboard.saveFilterCreation() on instance Position2.ArenaSuite.tests.DeliveryDashboard@9816741]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Position2.ArenaSuite.tests.DeliveryDashboard.addTimeEntry() on instance Position2.ArenaSuite.tests.DeliveryDashboard@9816741 depends on not successfully finished methods 
+[Position2.ArenaSuite.tests.DeliveryDashboard.saveFilterCreation() on instance Position2.ArenaSuite.tests.DeliveryDashboard@9816741]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addTimeEntry -->
+      </class> <!-- Position2.ArenaSuite.tests.DeliveryDashboard -->
+      <class name="Position2.ArenaSuite.tests.Login">
+        <test-method is-config="true" signature="initializeDriver()[pri:0, instance:Position2.ArenaSuite.tests.Login@45385f75]" started-at="2024-06-28T10:52:57 IST" name="initializeDriver" finished-at="2024-06-28T10:52:58 IST" duration-ms="1654" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeDriver -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:Position2.ArenaSuite.tests.Login@45385f75]" started-at="2024-06-28T10:52:58 IST" name="setup" finished-at="2024-06-28T10:53:05 IST" duration-ms="6838" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="inValidLogin()[pri:1, instance:Position2.ArenaSuite.tests.Login@45385f75]" started-at="2024-06-28T10:53:05 IST" name="inValidLogin" finished-at="2024-06-28T10:53:07 IST" duration-ms="1764" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inValidLogin -->
+        <test-method signature="validLogin()[pri:2, instance:Position2.ArenaSuite.tests.Login@45385f75]" started-at="2024-06-28T10:53:07 IST" name="validLogin" finished-at="2024-06-28T10:53:07 IST" duration-ms="433" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Position2.ArenaSuite.tests.Login@45385f75]" started-at="2024-06-28T10:53:16 IST" name="tearDown" finished-at="2024-06-28T10:53:16 IST" duration-ms="367" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Position2.ArenaSuite.tests.Login -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

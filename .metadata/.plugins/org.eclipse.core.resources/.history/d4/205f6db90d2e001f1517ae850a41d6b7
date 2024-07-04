@@ -1,0 +1,44 @@
+package Position2.ArenaSuite.testcomponents;
+
+import java.io.IOException;
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import position2.arenasuite.pageobjects.LoginPage;
+
+public class BaseTest {
+	public static WebDriver driver;
+	public LoginPage loginpage;
+
+	@BeforeSuite
+	public void initializeDriver() {
+		
+		if (driver == null) {
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+			driver.manage().window().maximize();
+		}
+	}
+	
+
+
+	public LoginPage launchApplication() throws IOException {
+		loginpage = new LoginPage(driver);
+		loginpage.goTo();
+		return loginpage;
+	}
+
+	 @AfterSuite
+	public void tearDown() {
+		if (driver != null) {
+			driver.quit();
+			driver = null;
+		}
+	}
+}
